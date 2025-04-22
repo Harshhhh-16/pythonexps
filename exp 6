@@ -1,0 +1,15 @@
+def factorial():
+ fact = int(input("enter any number for factorial-->"))
+
+ if(fact == 0 or fact == 1):
+ print(f"factorial of {fact} is 1")
+ elif(fact < 0):
+ print("factorial for negative numbers are not defined")
+ else:
+ i = 1
+ result = 1
+ while i <= fact:
+ result = result * i
+ i += 1
+ print(f"factorial of given number is --> {result}")
+factorial()
