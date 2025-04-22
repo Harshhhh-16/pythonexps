@@ -1,0 +1,51 @@
+def prime():
+ num = int(input("enter any number to check if it is prime or not-->"))
+ if(num % 2 == 0 or num % 3 == 0):
+ if(num == 2 or num == 3):
+ print(f"{num} is a prime number")
+ else:
+ print(f"{num} is not a prime number")
+ else:
+ print(f"{num} is a prime number")
+prime()
+
+exp7.2
+
+
+def add():
+ num1 = int(input("enter 1st number of addition -->"))
+ num2 = int(input("enter 2nd number of addition -->"))
+ return num1 + num2
+def sub():
+ num1 = int(input("enter 1st number of subtraction -->"))
+ num2 = int(input("enter 2nd number of subtraction -->"))
+ return num1 - num2
+def mul():
+ num1 = int(input("enter 1st number of multiplication -->"))
+ num2 = int(input("enter 2nd number of multiplication -->"))
+ return num1 * num2
+def div():
+ num1 = int(input("enter 1st number of division -->"))
+ num2 = int(input("enter 2nd number of division -->"))
+ return num1 / num2
+bol = True
+while bol:
+print("1. addition\n2. subtraction\n3. multiplication\n4. division")
+ choice = int(input("enter choice code -->"))
+ if choice == 1:
+ result = add()
+ print(f"Addition of given numbers is --> {result}")
+ elif choice == 2:
+ result = sub()
+ print(f"Subtraction of given number is --> {result}")
+ elif choice == 3:
+ result = mul()
+ print(f"Multiplication of given number is --> {result}")
+ elif choice == 4:
+ result = div()
+ print(f"Division of given number is --> {result}")
+ mood = input("Want to continue (y/n) --> ")
+ if mood.lower() == "n":
+ bol = False
+ else:
+ bol = True
