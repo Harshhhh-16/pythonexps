@@ -1,0 +1,49 @@
+import re
+
+pattern1 = re.compile(r'^(\+91[\s]?)?[6789]\d{9}$')
+pattern2 = re.compile(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}$')
+
+def CheckPhone(number):
+    result = pattern1.fullmatch(number)
+    if result:
+        print("valid")
+    else:
+        print("invalid")
+
+def CheckEmail(em):
+    result = pattern2.fullmatch(em)
+    if result:
+        print("valid email")
+    else:
+        print("invalid email")
+
+number = input("Enter your mobile number for a check --> ")
+email = input("Enter your email for a check --> ")
+CheckPhone(number)
+CheckEmail(email)
+
+
+exp 13.2
+
+import re
+
+def data(filepath):
+    try:
+        with open(filepath, 'r') as file:
+            material = file.read()
+            phone_pattern = r'\+91[\s]?[6789]\d{9}'
+            email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}'
+            date_pattern = r'\b\d{2}/\d{2}/\d{4}\b'
+
+            phoneno = re.findall(phone_pattern, material)
+            email = re.findall(email_pattern, material)
+            date = re.findall(date_pattern, material)
+
+            print("emails -->", ", ".join(email) if email else "none")
+            print("phone no -->", ", ".join(phoneno) if phoneno else "none")
+            print("date -->", ", ".join(date) if date else "none")
+    except Exception as e:
+        print(f"error --> {e}")
+
+filepath = input("Enter the path of data file --> ").strip()
+data(filepath)
