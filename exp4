@@ -1,0 +1,30 @@
+jee = { "simrun", "suraj", "yashica" }
+neet = { "sahil", "aastha", "yashica" }
+mhtcet = {"priyanshu", "yashica", "simrun", "aastha", "suraj"}
+print("union of jee and neet", jee | neet)
+print("intersection of neet and mhtcet", neet & mhtcet)
+print("difference of neet and mhtcet", neet - mhtcet)
+print("symmetric difference of neet and jee", neet ^ jee)
+
+
+
+4.2
+
+record = {}
+record["priyanshu"] = {
+ "grade": "A",
+ "Attendence": 100,
+ "subject": set(["maths 2", "physics", "DSA"])
+}
+record["simrun"] = {
+ "grade": "B",
+ "Attendence": 95,
+ "subject": set(["maths 2", "DSA"])
+}
+record["priyanshu"]["Attendence"] = 98
+record["simrun"]["grade"] = "Aprint(f"name --> priyanshu\ngrade --> {record['priyanshu']['grade']}\nAttendence -->
+{record['priyanshu']['Attendence']}\nsubject --> {', '.join(record['priyanshu']['subject'])}")
+print(f"name --> simrun\ngrade --> {record['simrun']['grade']}\nAttendence -->
+{record['simrun']['Attendence']}\nsubject --> {', '.join(record['simrun']['subject'])}")
+
+
