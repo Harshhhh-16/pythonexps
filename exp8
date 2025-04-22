@@ -1,0 +1,14 @@
+import string
+name = input("enter the name of the file-->")
+obj=open(name,"w")
+obj.write("hi , I have just created this file")
+obj.close()
+n = int( input("enter the number of element in length-->"))
+length = [for i in range(n):
+ num = int ( input(f"enter length{i+1}-->"))
+ length.append( num)
+with open(name ,"r") as file :
+ text = file.read()
+ words = text.translate(str.maketrans('','',string.punctuation)).split()
+ filtered_words = [word for word in words if len(word) in length]
+ print(f"word of length { length}-->{filtered_words}")
