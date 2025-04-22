@@ -1,0 +1,13 @@
+def sus_division():
+ try:
+ num1 = float(input("Enter first number for division--> "))
+ num2 = float(input("Enter second number for division--> "))
+ result = num1 / num2
+ print(f"{num1} divided by {num2} is {result}")
+ except ZeroDivisionError:
+ print("Error: Division by zero is not allowed.")
+ except ValueError:
+ print("Error: Invalid input. Please enter a number.")
+ except Exception as e:
+ print(f"An error occurred: {e}")
+sus_division()
