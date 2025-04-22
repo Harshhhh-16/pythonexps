@@ -1,0 +1,31 @@
+num = int(input("enter the number to check if it is even or odd-->"))
+if(num % 2 == 0):
+ print(f"{num} is even")
+else:
+ print(f"{num} is odd")
+
+
+exp5.2
+
+Value = int(input("enter number of loop-->"))
+for i in range(Value):
+ num = int(input("enter the number to check if it is even or odd-->"))
+ if(num % 2 == 0):
+ print(f"{num} is even")
+ else:
+ print(f"{num} is odd")
+
+
+
+
+exp 5.3
+
+Value = int(input("enter number of loop-->"))
+i = 0
+while i < Value:
+ num = int(input("enter the number to check if it is even or odd-->"))
+if(num % 2 == 0):
+ print(f"{num} is even")
+ else:
+ print(f"{num} is odd")
+ i += 1
